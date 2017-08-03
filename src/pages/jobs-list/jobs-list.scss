@@ -1,0 +1,47 @@
+page-jobs-list {
+
+	.filter-button{
+		background: #f1610a;
+		// width: 100%;
+		// margin: auto;
+		display: block;
+	}
+	.no-results {
+		font-size: 5vw;
+		color: #555;
+		font-weight: bold;
+		width: 86%;
+		margin-left: 7%;
+		text-align: center;
+	}
+	
+	.job-item{
+		border-top: 0px !important;
+		.item-inner{
+			border-bottom: 0px solid #c8c7cc !important;
+		}
+		border-bottom: 1px solid #c8c7cc;
+		img{
+			width: 16vw;
+			height: auto;
+
+		}
+		.job-item-list{
+			margin: 0px !important;
+			.job-title{
+				font-size: 5vw;
+				color: #000;
+				white-space: normal;
+			}
+			.job-date{
+				font-size: 4vw;
+				color: #555;
+			}
+			.job-owner{
+				font-size: 4vw;
+				color: #555;
+				    white-space: normal;
+			}
+		}
+	}
+}

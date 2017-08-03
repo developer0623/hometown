@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Careers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding-top>
+  <button ion-button class="filter-button" (click)="onFilter()">Filter and Search</button>
+  <ion-list *ngIf = "isloading">
+    <ion-item *ngFor = "let list of jobLists" class="job-item" (click)="gotonewPage(list)">
+      <img src="{{imageurl+list.companyLogo}}" item-left/>
+      <ion-list class="job-item-list">
+        <p class="job-title">{{list.title}}</p>
+        <p class="job-date">Posted: {{list.posted}}</p>
+        <p class="job-owner">By: {{list.company}}</p>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+  <p class="no-results" *ngIf="isloading && !jobLists">Your search has returned zero results. Please try again.</p>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+
+</ion-content>

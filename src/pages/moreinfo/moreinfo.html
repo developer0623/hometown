@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>More</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="moreinfo-header">SOCIALIZE WITH US</ion-item>
+    <ion-item  (click)="itemTapped($event, 0)" class="moreinfo-item">
+      <ion-icon name="logo-facebook" item-left></ion-icon>
+      Like us on Facebook
+    </ion-item>
+    <ion-item (click)="itemTapped($event, 1)" class="moreinfo-item">
+      <ion-icon name="logo-twitter" item-left></ion-icon>
+      Follow us on Twitter
+    </ion-item>
+    <ion-item (click)="itemTapped($event, 2)" class="moreinfo-item">
+      <ion-icon name="logo-youtube" item-left></ion-icon>
+      Subscribe to us on Youtube
+    </ion-item>
+    <ion-item (click)="itemTapped($event, 3)" class="moreinfo-item">
+      <ion-icon name="logo-linkedin" item-left></ion-icon>
+      Network on LinkedIn
+    </ion-item>
+
+    <ion-item (click)="itemTapped($event, 5)" class="moreinfo-item">
+      <ion-icon name="ios-mail" item-left></ion-icon>
+      Jobs via Email
+    </ion-item>
+
+    <ion-item class="moreinfo-header">REACH OUT TO US</ion-item>
+    <ion-item (click)="itemTapped($event, 4)" class="moreinfo-item">
+      <ion-icon name="md-mail" item-left></ion-icon>
+      Contact us
+    </ion-item>
+
+  </ion-list>
+  
+</ion-content>

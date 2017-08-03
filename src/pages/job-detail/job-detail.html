@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Careers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <p class="title" margin-bottom>{{job.title}}</p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Posted:</span>{{job.posted}}
+    </p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Company:</span>{{job.company}}
+    </p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+    <span>County:</span>{{job.county}}
+    </p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Industry:</span>{{job.industry}}
+    </p>
+  </ion-row>
+  <div class="summary-title">
+    Summary
+  </div>
+  <div [innerHtml]="job.summary" class="job-summary"></div>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Job Type:</span>{{job.type}}
+    </p>  
+  </ion-row>
+  <div class="certification-title">
+    Experience/Certification Required:
+  </div>
+  <div [innerHtml]="job.experience" class="job-certification"></div>
+
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Education Level:</span>{{job.education}}
+    </p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Career Level:</span>{{job.career}}
+    </p>
+  </ion-row>
+  <div class="certification-title">
+    Salary/Benefits:
+  </div>
+  <div [innerHtml]="job.salary" class="job-certification"></div>
+  <button ion-button class="job-apply-bt" (click)="onClickApply()">How To Apply</button>
+  
+
+  <ion-fab bottom right #fab>
+    <button ion-fab>Share</button>
+    <ion-fab-list side="top">
+      <button ion-fab color="facebook" (click)="share('facebook', 0)"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="twitter" (click)="share('twitter', 1)"><ion-icon name="logo-twitter"></ion-icon></button>
+     <!--  <button ion-fab color="linkedin" (click)="share('linkedin', 2)"><ion-icon name="logo-linkedin"></ion-icon></button>
+      <button ion-fab color="danger" (click)="share('google', 3)"><ion-icon name="logo-googleplus"></ion-icon></button> -->
+      <button ion-fab color="primary" (click)="share('mail', 2)"><ion-icon name="ios-mail"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

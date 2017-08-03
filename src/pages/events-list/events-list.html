@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding-top>
+  <ion-list *ngIf = "isloading">
+    <ion-item *ngFor = "let list of eventsLists" class="job-item" (click)="gotonewPage(list)">
+      <ion-list class="job-item-list">
+        <p class="job-title">{{list.name}}</p>
+        <p class="job-date">When: {{list.date*1000 | date : 'longDate'}}</p>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+
+ 
+</ion-content>

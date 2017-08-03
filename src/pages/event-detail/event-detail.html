@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <p class="title" margin-bottom><span>Title:</span>{{event.name}}</p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>When:</span>{{event.date*1000 | date : 'longDate'}}
+    </p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Where:</span>{{event.address}}{{event.zip}}
+    </p>
+  </ion-row>
+  
+  <div class="summary-title">
+    Information
+  </div>
+  <div [innerHtml]="event.content" class="job-summary"></div>
+
+  <button ion-button class="event-learn-more" (click)="onClickLearnMore()">Learn More</button>
+  <ion-fab bottom right #fab>
+    <button ion-fab>Share</button>
+    <ion-fab-list side="top">
+      <button ion-fab color="facebook" (click)="share('facebook', 0)"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="twitter" (click)="share('twitter', 1)"><ion-icon name="logo-twitter"></ion-icon></button>
+     <!--  <button ion-fab color="linkedin" (click)="share('linkedin', 2)"><ion-icon name="logo-linkedin"></ion-icon></button>
+      <button ion-fab color="danger" (click)="share('google', 3)"><ion-icon name="logo-googleplus"></ion-icon></button> -->
+      <button ion-fab color="primary" (click)="share('mail', 2)"><ion-icon name="ios-mail"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf = "isloading">
+    <ion-item *ngFor = "let list of newsLists" class="job-item" (click)="gotonewPage(list)">
+      <ion-list class="job-item-list">
+        <p class="job-title">{{list.title}}</p>
+        <p class="job-date">Posted: {{list.date | date : 'longDate'}}</p>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>

@@ -1,0 +1,38 @@
+modal-filter {
+	.search-div {
+		.keyword-p{
+			font-size: 5vw;
+			font-weight: bold;
+			color: #333;
+			margin: 2vw 0 1vw 0;
+		}
+	}
+
+	.list-header {
+		font-size: 5vw;
+			font-weight: bold;
+			color: #333;
+			margin: 2vw 0 1vw 0;
+	}
+
+	.jobindustry-list, .jobtype-list, .jobeducation-list, .jobcounty-list {
+		margin-bottom: 10px !important;
+		ion-item {
+			border-bottom: none !important;
+		}
+		ion-label {
+			font-size: 4.5vw;
+		}
+
+		ion-checkbox {
+			font-size: 4.5vw;
+		}
+
+
+	}
+
+	.filter-button {
+		width: calc(100% - 32px);
+	}
+	
+}

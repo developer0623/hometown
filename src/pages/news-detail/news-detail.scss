@@ -1,0 +1,38 @@
+page-news-detail {
+	.title{
+		font-weight: bold;
+		font-size: 5vw;
+		color: #333;
+		span{
+			margin-right: 1vw;
+		}
+	}
+	.job-content{
+		font-size: 4.5vw;
+		color: #333;
+		span{
+			font-weight: bold;
+			margin-right: 1vw;
+		}
+	}
+	.summary-title {
+		width: 100%;
+		border: 1px solid #777;
+		font-size: 4.5vw;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 4vw;
+		padding: 1.5vw;
+		background-color: #ccc;
+		color: #333;
+	}
+	.job-summary{
+		font-size: 4.5vw;
+		color: #333;
+	}
+
+	.event-learn-more  {
+		background-color: #f1610a !important;
+		font-size: 4.5vw !important;
+	}
+}

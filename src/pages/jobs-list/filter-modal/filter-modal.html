@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Filter Careers</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding-top>
+  
+  <div class="search-div">
+    <p class="keyword-p"  padding-left>Keyword</p>
+    <ion-searchbar
+    [(ngModel)]="searchKeyword"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)"
+    placeholder="Input keyword">
+    </ion-searchbar>
+  </div>
+
+  <ion-list class="jobindustry-list" *ngIf="jobIndustries.length>0">
+    <p class="list-header"  padding-left>Job Industry</p>
+    <ion-item *ngFor="let item of jobIndustries">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.flag" (ionChange)="onChangeIndustry(item)"></ion-checkbox>
+    </ion-item>    
+  </ion-list>
+
+  <ion-list class="jobtype-list" *ngIf="jobTypes.length>0">
+    <p class="list-header"  padding-left>Job Type</p>
+    <ion-item *ngFor="let item of jobTypes">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.flag" (ionChange)="onChangeType(item)"></ion-checkbox>
+    </ion-item>    
+  </ion-list>
+
+  <ion-list class="jobeducation-list" *ngIf="educations.length>0">
+    <p class="list-header"  padding-left>Education</p>
+    <ion-item *ngFor="let item of educations">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.flag" (ionChange)="onChangeEducation(item)"></ion-checkbox>
+    </ion-item>    
+  </ion-list>
+
+  <ion-list class="jobcounty-list" *ngIf="counties.length>0">
+    <p class="list-header"  padding-left>County</p>
+    <ion-item *ngFor="let item of counties">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.flag" (ionChange)="onChangeCounty(item)"></ion-checkbox>
+    </ion-item>    
+  </ion-list>
+
+  <button ion-button margin class="filter-button" (click)="onFliter()">Filter</button>
+  
+</ion-content>

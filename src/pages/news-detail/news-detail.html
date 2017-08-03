@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <p class="title" margin-bottom><span>Title:</span>{{news.title}}</p>
+  </ion-row>
+  <ion-row>
+    <p class="job-content" no-margin>
+      <span>Posted:</span>{{news.date | date : 'longDate'}}
+    </p>
+  </ion-row>
+  
+  <div class="summary-title">
+    Information
+  </div>
+  <div [innerHtml]="news.content" class="job-summary"></div>
+
+  
+</ion-content>
